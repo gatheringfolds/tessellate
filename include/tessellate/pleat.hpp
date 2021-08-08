@@ -1,8 +1,14 @@
-//
-// Created by manny on 8/8/21.
-//
+#pragma once
 
-#ifndef TESSELLATE_PLEAT_HPP
-#define TESSELLATE_PLEAT_HPP
+#include <homog2d.hpp>
 
-#endif // TESSELLATE_PLEAT_HPP
+namespace tsl {
+class Pleat{
+ public:
+   Pleat(h2d::Line2d mountain, double distance) { }
+
+private:
+   h2d::Line2d mountain{};
+   h2d::Line2d valley{};
+};
+}
