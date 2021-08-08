@@ -1,0 +1,8 @@
+*.swp
+core
+# clion
+.idea
+
+# ignore build directories
+*build*/
+*log*
