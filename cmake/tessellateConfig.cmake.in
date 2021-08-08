@@ -1,0 +1,16 @@
+# - Config file for the tessellate package
+# It defines the following variables
+#  TESSELLATE_INCLUDE_DIRS - include directories for tessellate
+#  TESSELLATE_LIBRARIES    - libraries to link against
+
+# Compute paths
+get_filename_component(TESSELLATE_CMAKE_DIR "${CMAKE_CURRENT_LIST_FILE}" PATH)
+set(TESSELLATE_INCLUDE_DIRS "@CONF_INCLUDE_DIRS@")
+
+# Our library dependencies (contains definitions for IMPORTED targets)
+if(NOT TARGET tessellate)
+    include("${TESSELLATE_CMAKE_DIR}/tessellateTargets.cmake")
+endif()
+
+# These are IMPORTED targets created by tessellateTargets.cmake
+set(TESSELLATE_LIBRARIES tessellate)
