@@ -31,7 +31,7 @@ install(TARGETS tessellate project_options project_warnings
         COMPONENT dev)
 
 if (ENABLE_PCH)
-    list(APPEND public_headers pleat)
+    list(APPEND public_headers fold)
 
     foreach (header ${public_headers})
         list(APPEND headers "include/tessellate/${header}.hpp")

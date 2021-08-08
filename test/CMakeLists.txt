@@ -10,7 +10,7 @@ list(APPEND libraries
         tessellate)
 
 add_library(catch_main STATIC catch_main.cpp)
-target_link_libraries(catch_main PUBLIC ${libraries})
+target_link_libraries(catch_main PUBLIC ${libraries} project_warnings project_options)
 
 macro (make_test test_name libraries)
   add_executable(${test_name} ${test_name}.cpp)
@@ -44,7 +44,7 @@ macro(add_constexpr_catch_test test_name)
           --out=constexpr.xml)
 endmacro()
 
-add_catch_test(test_pleat)
+add_catch_test(test_fold)
 
 if (ENABLE_EXAMPLES)
 #    add_test(NAME minimal_publisher_subscriber COMMAND minimal_publisher_subscriber)
